@@ -30,12 +30,35 @@ new Vue({
                 paragrafo: 'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.',
             },
         ],
-        currentImg: 0
+        indiceActiveCorrente: 0
+    },
+    methods: {
+        // imgPrecedente() {
+        //     let nuovoIndice = this.indiceActiveCorrente - 1;
+        //     if (nuovoIndice < 0) {
+        //         nuovoIndice = this.imgList.lenght - 1;
+        //     }
+        //     this.indiceActiveCorrente = nuovoIndice;
+        // },
+        imgPrecedente() {
+            let newIndex = this.indiceActiveCorrente - 1;
+
+            if (newIndex < 0) {
+                newIndex = this.imgList.length - 1;
+            }
+
+            this.indiceActiveCorrente = newIndex;
+        },
+        imgSuccessiva() {
+            let newIndex = this.indiceActiveCorrente + 1;
+
+            if (newIndex > this.imgList.length - 1) {
+                newIndex = 0;
+            }
+
+            this.indiceActiveCorrente = newIndex;
+        },
+
 
     }
 });
-
-
-
-
-

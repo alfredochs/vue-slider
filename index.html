@@ -13,23 +13,28 @@
 <body>
     <div id="root">
         <main>
-            <!-- Tutto questo blocco si ripeterà -->
-            <div class="general-container" v-for="(imgListkeys,indice) in imgList">
+            <div class="general-container">
 
                 <div class="container-left">
 
-                    <img v-bind:src="imgListkeys.url">
-
-                    <div class="img-text-container">
-                        <h2>{{imgListkeys.titolo}}</h2>
-                        <p> {{imgListkeys.paragrafo}}</p>
+                    <div class="single-slide" v-for="slide,indice in imgList"
+                        :class="indice === indiceActiveCorrente ? 'active' : ''">
+                        <img v-bind:src=" slide.url" v-bind:alt="'immagine numero '+ (indice + 1)">
+                        <div class="text-container">
+                            <h3>{{slide.titolo}}</h3>
+                            <p>{{slide.paragrafo}}</p>
+                        </div>
                     </div>
-
                 </div>
-                <!-- <div class="container-right"></div> -->
-            </div>
-            <!-- Tutto questo blocco si ripeterà -->
 
+                <div class="container-right">
+                    <img :src="slide.url" alt="" v-for="slide,i in imgList"
+                        :class="i===indiceActiveCorrente ? 'active':''">
+                    <div class="arrows-container">
+                        <button class="arrow-top" @click="imgPrecedente">Su</button>
+                        <button class="arrow-down" @click="imgSuccessiva">Giu</button>
+                    </div>
+                </div>
         </main>
         <footer></footer>
     </div>
