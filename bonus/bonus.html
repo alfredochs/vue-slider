@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="bonus.css">
+    <title>Slide Show</title>
+</head>
+
+<body>
+    <div id="root">
+        <main>
+            <div class="container p-0 border row m-auto pt-3">
+
+                <div class="left-container p-0 col-10">
+
+                    <div class="slide" v-for="(slideObj,indice) in imgList"
+                        :class="indice === currentImg ? 'active':''">
+                        <img :src="slideObj.url" :alt="'indice # '+(indice+1) ">
+                        <div class="text-container">
+                            <h3>{{slideObj.titolo}}</h3>
+                            <p>{{slideObj.paragrafo}}</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="right-container p-0 col-2 d-flex flex-column position-relative align-items-center">
+                    <img :src="chiaviOgg.url" alt="" v-for="(chiaviOgg,indice) in imgList" class="w-100"
+                        :class="indice === currentImg ? 'active':''">
+                    <div class="buttons-container position-absolute d-flex flex-column justify-content-between">
+                        <button type="button" class="btn btn-light" @click="upButton">up</button>
+                        <button type="button" class="btn btn-light" @click="downButton">down</button>
+
+                    </div>
+
+                </div>
+            </div>
+
+    </div>
+    </main>
+    <footer></footer>
+    </div>
+    <script src="bonus.js"></script>
+</body>
+
+</html>

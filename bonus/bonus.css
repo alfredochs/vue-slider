@@ -1,0 +1,45 @@
+
+.left-container {
+    position: relative;
+}
+.slide{
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: opacity .4s;
+}
+.slide.active{
+    opacity: 1;
+}
+.slide > img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.text-container{
+    font-size: 10px;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+    text-align: right;
+}
+
+.right-container > img{
+    object-fit: cover;
+    filter: brightness(.3);
+    transition: filter .4s;
+}
+.right-container > img.active{
+    filter: brightness(1);
+}
+.buttons-container{
+    /* /* align-items: center; */
+    height: 100%;
+}
