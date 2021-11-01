@@ -30,6 +30,7 @@ new Vue({
             },
         ],
         currentImg: 0,
+        hover: false
     },
     methods: {
         upButton() {
@@ -45,7 +46,7 @@ new Vue({
                 nuovoIndice = 0;
             }
             this.currentImg = nuovoIndice;
-        }
+        },
     },
     mounted() {
         setInterval(() => {

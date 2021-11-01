@@ -17,6 +17,7 @@
         <main>
             <div class="container p-0 border row m-auto pt-3">
 
+
                 <div class="left-container p-0 col-10">
 
                     <div class="slide" v-for="(slideObj,indice) in imgList"
@@ -39,11 +40,17 @@
                     </div>
 
                 </div>
-            </div>
+                <div>
+                    <span class="d-flex flex-column" @mouseover="hover = true" @mouseleave="hover = false"
+                        :class="hover===true ? 'bg-danger':''">
+                        Hover per mostrare messaggio nascosto
+                    </span>
+                    <span v-if="hover">Messaggio Nascosto.</span>
+                </div>
 
-    </div>
-    </main>
-    <footer></footer>
+            </div>
+        </main>
+        <footer></footer>
     </div>
     <script src="bonus.js"></script>
 </body>
