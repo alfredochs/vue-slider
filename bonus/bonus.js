@@ -4,27 +4,27 @@ new Vue({
     data: {
         imgList: [
             {
-                url: 'imgBonus/01.JPG',
+                url: 'imgBonus/01.jpg',
                 titolo: "Svezia",
                 paragrafo: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.',
             },
             {
-                url: 'imgBonus/02.JPG',
+                url: 'imgBonus/02.jpg',
                 titolo: "Svizzera",
                 paragrafo: 'Lorem ipsum',
             },
             {
-                url: 'imgBonus/03.JPG',
+                url: 'imgBonus/03.jpg',
                 titolo: "Gran Bretagna",
                 paragrafo: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.',
             },
             {
-                url: 'imgBonus/04.JPG',
+                url: 'imgBonus/04.jpg',
                 titolo: "Germania",
                 paragrafo: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
             },
             {
-                url: 'imgBonus/05.JPG',
+                url: 'imgBonus/05.jpg',
                 titolo: "Paradise",
                 paragrafo: 'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.',
             },
